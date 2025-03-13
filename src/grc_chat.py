@@ -85,6 +85,6 @@ async def main():
         await engineer.cleanup()
 
 
-# Create an ACM policy to create a namespace called lightspeed in my cluster
+# python src/grc_chat.py ./src/mcp-config.json
 if __name__ == "__main__":
     asyncio.run(main())
