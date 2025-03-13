@@ -21,6 +21,7 @@ from langchain_community.agent_toolkits import SQLDatabaseToolkit, create_sql_ag
 from IPython.display import Image, display
 from langchain_core.runnables.graph import CurveStyle, MermaidDrawMethod
 from langchain_openai import ChatOpenAI
+from langchain_groq import ChatGroq
 
 
 
@@ -92,14 +93,15 @@ root_nodes = ['author','search']
 
 
 _ = load_dotenv(find_dotenv()) 
-openai.api_key  = os.getenv('OPENAI_API_KEY')
+# openai.api_key  = os.getenv('OPENAI_API_KEY')
 #model = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)
 #gpt-4o
 #gpt-4o-mini
 #gpt-3.5-turbo
 #o1
 #o3-mini
-model = ChatOpenAI(model="gpt-4o", temperature=0)
+# model = ChatOpenAI(model="gpt-4o", temperature=0)
+model = ChatGroq(temperature=0, model_name="llama-3.3-70b-versatile")
 
 
 def router_node(state: AgentState):

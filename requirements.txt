@@ -13,5 +13,6 @@ langgraph-checkpoint-sqlite
 langchain_community
 langchain_core
 langchain_openai
+langchain-groq
 psycopg2
 
